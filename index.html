@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Story Books | Monochrome Library</title>
+    <!-- External CSS file: style.css (linked separately) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="story-header">
+            <h1 class="main-title">STORY BOOKS</h1>
+            <div class="main-sub">black & white archives</div>
+        </header>
+
+        <!-- Books Grid: Book of Feelings, Book of Pain, Book of Emptiness, and a coming soon slot -->
+        <div class="books-grid" id="booksGrid">
+            <!-- Card 1: Book of Feelings - image from imgs/feelings.png -->
+            <div class="book-card" data-book="feelings">
+                <div class="book-icon-img">
+                    <img src="imgs/feelings.png" alt="Book of Feelings" class="book-thumb" onerror="this.src='https://placehold.co/200x200/1a1a1a/ffffff?text=Feelings'; this.onerror=null;">
+                </div>
+                <h2 class="book-title">Book of Feelings</h2>
+                <div class="book-divider"></div>
+                <p class="book-description">Feelings.... what even is that? Sounds... useless... </p>
+                <button class="read-btn" data-modal="feelings">read book →</button>
+            </div>
+
+            <!-- Card 2: Book of Pain - image from imgs/pain.png -->
+            <div class="book-card" data-book="pain">
+                <div class="book-icon-img">
+                    <img src="imgs/pain.png" alt="Book of Pain" class="book-thumb" onerror="this.src='https://placehold.co/200x200/1a1a1a/ffffff?text=Pain'; this.onerror=null;">
+                </div>
+                <h2 class="book-title">Book of Pain</h2>
+                <div class="book-divider"></div>
+                <p class="book-description">It's not always the same person you see... Sometimes it's just a mask to hide the truth... </p>
+                <button class="read-btn" data-modal="pain">read book →</button>
+            </div>
+
+            <!-- Card 3: Book of Emptiness - image from imgs/emptiness.png -->
+            <div class="book-card" data-book="emptiness">
+                <div class="book-icon-img">
+                    <img src="imgs/emptiness.png" alt="Book of Emptiness" class="book-thumb" onerror="this.src='https://placehold.co/200x200/1a1a1a/ffffff?text=Emptiness'; this.onerror=null;">
+                </div>
+                <h2 class="book-title">Book of Emptiness</h2>
+                <div class="book-divider"></div>
+                <p class="book-description">Nothing, but a loneliness in the endless void...</p>
+                <button class="read-btn" data-modal="emptiness">read book →</button>
+            </div>
+
+            <!-- Card 4: Coming Soon - image from imgs/coming-soon.png -->
+            <div class="book-card coming-card">
+                <div class="book-icon-img">
+                    <img src="imgs/coming-soon.png" alt="Coming Soon" class="book-thumb" onerror="this.src='https://placehold.co/200x200/1a1a1a/888888?text=Soon'; this.onerror=null;">
+                </div>
+                <span class="coming-soon-badge">forthcoming</span>
+                <h2 class="book-title">— — —</h2>
+                <div class="book-divider"></div>
+                <p class="book-description">a new chapter awakens. stay in the void.</p>
+                <button class="read-btn coming-soon-btn" disabled style="opacity:0.6; cursor:not-allowed;">coming soon</button>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <p>Always the same cycle of rise and falling<br> <span>Black ink on white void</span></p>
+        </footer>
+    </div>
+
+    <!-- MODAL STRUCTURE (dynamic) -->
+    <div id="storyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <button id="closeModalBtn" class="close-modal" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalText" class="modal-story-text"></p>
+                <div class="modal-footer-line">
+                    <button id="modalCloseFooter" class="read-btn close-footer">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript file: script.js (separate) -->
+    <script src="script.js"></script>
+</body>
+</html>
